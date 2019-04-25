@@ -1,0 +1,104 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+
+} 
+
+nav {
+  background: rgb(112, 112, 112);
+  height: .5vh;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.logo {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: flex;
+}
+
+.navOptions {
+  display: flex;
+}
+
+.directory {
+  font-weight: 100;
+  text-transform: capitalize;
+  margin-left: 2rem;
+}
+
+.rowOne {
+  background: #000;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rowOneText {
+  display: flex;
+  color: rgb(243, 233, 99);
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.rowBox {
+  padding: 2rem 4rem 0 4rem;
+  display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+  align-content: stretch;
+}
+
+.greenBox {
+  height: 20vh;
+  width: 20vw;
+  border-radius: 10%;
+  background: aquamarine;
+  display: flex;
+
+}
+
+.orangeBox {
+  height: 20vh;
+  width: 40vw;
+  background: rgb(255, 195, 108);
+  display: flex;
+}
+
+.contentRow {
+  padding: 2rem 5rem 0 8rem;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.contentBox {
+  padding: 2rem;
+  height: 20vh;
+  width: 40vw;
+  display: flex;
+}
+
+.bobRossImage {
+  width: 30vw;
+  /* height: auto; */
+}
+
+footer {
+  height: 10vh;
+  background: rgb(55, 55, 86)
+}
