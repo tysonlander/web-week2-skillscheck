@@ -12,8 +12,10 @@ let me = {firstName: 'Tyson',
           superHeroName:'Silver Falcon' , 
           homeTown: 'Salt Lake City', 
           superPowers: ['skiing', 'fire eating', 'running'], 
-          superPowerXP: function () { return Math.floor(Math.random() * 10) +1; }, 
-          profileImage: `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`};
+          superPowerXP: function() { return Math.floor(Math.random() * 10) +1; }, 
+          profileImage: function() {
+            return `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`}
+          }
 // The firstName key should be your name as a string. 
 
 // The superHeroName key should be something fun, feel free to jazz it up e.g. "Bodacious Bryan". 
@@ -43,17 +45,34 @@ let homeTown = me.homeTown
 
 function setColor(arr){
   arr.splice(3, arr.length-3)
-  return arr
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] === 'blue') {
+      arr[i] = '#4D4DFF'
+    }
+  }
+  background(arr[0], arr[1], arr[2])
 }
 // CODE HERE
 
 //////////////////Step 5////////////////////
 //Create a function called 'setPowers' that takes in arr as a parameter. Loop over the arr param and run a function called createLi(), which will take each item of the array as an agument. The createLi function is a function we created to set the data on the screen. It outside the scope of this project
 
+function setPowers(arr){
+  for(let i = 0; i < arr.length; i++) {
+    createLi(arr[i]);
+  }
+}
 // CODE HERE
 
 
 //////////////////Step 6////////////////////
 //Lastly, create a function called redactInfo that will take in an obj as a paramter. Let's imagine our super hero needs to go undercover and we need to remove all info about them. That is what this function will do. Loop over the object and change each keys value to 'redacted'. Outside of the loop but still in the redactInfo function, run the function redacted() which is a function we created that will update the text on the screen.
+
+function redactInfo(obj){
+  for(let key in obj) {
+    obj[key] = 'redacted'
+  }
+  redacted();
+}
 
 // CODE HERE
