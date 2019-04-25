@@ -3,12 +3,17 @@
 
 //////////////////Step 1////////////////////
 // Create a new array called 'faveColors' and set it your three favorite colors as strings.
-
+let faveColors = ['red', 'green', 'blue'];
 // CODE HERE
 
 //////////////////Step 2////////////////////
 // Create an object called 'me' that has these keys: firstname, superHeroName, homeTown, superPowers, superPowerXP, profileImage. 
-
+let me = {firstName: 'Tyson', 
+          superHeroName:'Silver Falcon' , 
+          homeTown: 'Salt Lake City', 
+          superPowers: ['skiing', 'fire eating', 'running'], 
+          superPowerXP: function () { return Math.floor(Math.random() * 10) +1; }, 
+          profileImage: `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`};
 // The firstName key should be your name as a string. 
 
 // The superHeroName key should be something fun, feel free to jazz it up e.g. "Bodacious Bryan". 
@@ -25,6 +30,9 @@
 
 //////////////////Step 3////////////////////
 // Create three variables to hold some data off your me object. The first variable should be 'regularName' that is the value of your firstName on the me object. The next variable is 'superName' which is the value of superHeroName on the me object. Last is 'homeTown' which will be the value of homeTown on the me object
+let regularName = me.firstName;
+let superName = me.superHeroName;
+let homeTown = me.homeTown
 
 // CODE HERE
 
@@ -33,6 +41,10 @@
 
 // Next, create a for loop to loop over the array. If any of the colors you chose is 'blue', change it's value to '#4D4DFF' which is just a more appealing color of blue. Outside of the for loop but still inside of setColor, invoke the function called background which will take in three arguments. These arguments should be each item of your array. This is a function we created for you to set the background colors.
 
+function setColor(arr){
+  arr.splice(3, arr.length-3)
+  return arr
+}
 // CODE HERE
 
 //////////////////Step 5////////////////////
